@@ -1,0 +1,86 @@
+body {
+    background: #0b0b12;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.wrap {
+    width: 90%;
+    max-width: 420px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #f5d06b;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* ปุ่มหลัก */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #e2c468, #b08b32);
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.card {
+    background: #14141d;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 22px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #1b1b25;
+    border: 1px solid #333;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.rateBox {
+    background: #1b1b25;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* กล่องข้อความพื้นฐาน */
+.msg {
+    margin-top: 12px;
+    white-space: pre-wrap;
+    font-size: 13px;
+}
+
+/* ข้อความสำเร็จ = สีเขียว */
+.msg-success {
+    color: #00e676; /* เขียวสดอ่านง่าย */
+    font-weight: bold;
+}
+
+/* ข้อความผิดพลาด = สีแดง */
+.msg-error {
+    color: #ff6d6d;
+    font-weight: bold;
+}
