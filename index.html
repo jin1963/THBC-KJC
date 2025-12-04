@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>THBC → KJC Auto Stake</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script src="config.js"></script>
+  <script src="thbc-kjc.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="navbar">
+      <div class="brand">Kaojino THBC → KJC Stake</div>
+      <button id="btnConnect">Connect Wallet</button>
+    </div>
+
+    <section class="card">
+      <h1>Swap THBC → KJC & Auto-Stake</h1>
+
+      <div class="row">
+        <span>Rate (fixed):</span>
+        <span id="rateText">–</span>
+      </div>
+      <div class="row">
+        <span>APY:</span>
+        <span id="apyText">–</span>
+      </div>
+      <div class="row">
+        <span>Lock duration:</span>
+        <span id="lockText">–</span>
+      </div>
+
+      <label for="thbcAmount">THBC amount</label>
+      <input id="thbcAmount" placeholder="0" inputmode="decimal" />
+
+      <div class="result">
+        <div>You will receive & stake: <span id="kjcOut">0</span> KJC</div>
+        <div>Estimated reward (after lock): <span id="kjcReward">0</span> KJC</div>
+        <div>Total after lock: <span id="kjcTotal">0</span> KJC</div>
+      </div>
+
+      <button id="btnApprove">Approve THBC</button>
+      <button id="btnStake">Swap & Stake</button>
+
+      <div id="txMessage" class="msg"></div>
+    </section>
+
+    <section class="card">
+      <h2>Your Position</h2>
+      <div class="row">
+        <span>Address:</span>
+        <span id="addrShort">–</span>
+      </div>
+      <div class="row">
+        <span>THBC spent:</span>
+        <span id="posThbc">0</span>
+      </div>
+      <div class="row">
+        <span>KJC staked:</span>
+        <span id="posKjc">0</span>
+      </div>
+      <div class="row">
+        <span>Reward:</span>
+        <span id="posReward">0</span>
+      </div>
+      <div class="row">
+        <span>Unlock time:</span>
+        <span id="posUnlock">–</span>
+      </div>
+      <div class="row">
+        <span>Status:</span>
+        <span id="posStatus">–</span>
+      </div>
+
+      <button id="btnClaim">Claim KJC</button>
+      <div id="claimMessage" class="msg"></div>
+    </section>
+
+  </div>
+</body>
+</html>
